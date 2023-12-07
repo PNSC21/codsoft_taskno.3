@@ -20,6 +20,11 @@ def generate_password():
     # Total count for selected categories
     total_required = uppercase_count + lowercase_count + digit_count + symbol_count
 
+    # Check if the total count exceeds the password length
+    if total_required > password_length:
+        messagebox.showwarning("Warning", "The total count of selected conditions exceeds the password length.")
+        return
+
     # Calculate remaining length
     remaining_length = password_length - total_required
 
@@ -114,7 +119,6 @@ generate_button.grid(row=6, column=0, columnspan=2, pady=10)
 generate_button = ttk.Button(frame, text="Generate Password", command=generate_password, style='TButton')
 generate_button.grid(row=6, column=0, columnspan=2, pady=10)
 style.map('TButton', foreground=[('pressed', 'black'), ('active', 'black'), ('!disabled', 'black')])
-
 
 password_label = ttk.Label(frame, text="Generated Password: ", style='TLabel')
 password_label.grid(row=7, column=0, columnspan=2, pady=10)
