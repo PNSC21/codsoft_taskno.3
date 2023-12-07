@@ -12,8 +12,6 @@ Welcome to the Password Generator project! This Python-based application aims to
 
 - **Category Selection:** Choose from a variety of character categories, including Uppercase Letters, Lowercase Letters, Digits, and Symbols. This feature allows users to create diverse and robust passwords.
 
-- **Dynamic Font Sizing:** The application dynamically adjusts font size to ensure optimal readability and aesthetics.
-
 ## How to Use
 
 1. **Enter Desired Password Length:** Specify the length of the password you want to generate.
